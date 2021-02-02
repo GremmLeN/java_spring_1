@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Список товаров</title>
+</head>
+<body>
+<h1>Перечень продуктов</h1>
+<table>
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Имя</td>
+        <td>Стоимость</td>
+    </tr>
+    </thead>
+    <tbody>
+    <!--/*@thymesVar id="products" type="java.util.List<ru.geekbrains.model.Product>"*/-->
+    <tr th:each="product : ${products}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.title}"></td>
+        <td th:text="${product.price}"></td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/}">Главная страница</a>
+<a th:href="@{/products/add}">Добавить продукт</a>
+</body>
+</html>

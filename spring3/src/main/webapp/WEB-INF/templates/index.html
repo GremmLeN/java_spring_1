@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Добро пожаловать!</title>
+</head>
+
+<body>
+<!--/*@thymesVar id="message" type="java.lang.String"*/-->
+<h1 th:text="${message}"/>
+<h2>
+    Spring shop
+    <br>
+    <br>
+    <a th:href="@{/products}">Перейти к списку товаров</a>
+</h2>
+</body>
+</html>
