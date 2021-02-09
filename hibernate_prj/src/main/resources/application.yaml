@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_hiber
+    username: postgres
+    password: 123
+  jpa:
+    show-sql: true
+  liquibase:
+    change-log: classpath:db/liquibase-changeLog.xml
