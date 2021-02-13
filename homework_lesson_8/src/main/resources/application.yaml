@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_hiber
+    username: postgres
+    password: 123
+  jpa:
+    show-sql: true
+
+# THYMELEAF (ThymeleafAutoConfiguration)
+  thymeleaf:
+    enabled: true
+    encoding: UTF-8               # Template encoding.
+    mode: HTML5                   # режим шаблонов
+    prefix: classpath:/templates/ # путь к шаблонам, Prefix
+    suffix: .html
